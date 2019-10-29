@@ -6,6 +6,8 @@ const siteContent = {
     "nav-item-4": "Features",
     "nav-item-5": "About",
     "nav-item-6": "Contact",
+    "nav-item-7": "Shop",
+    "nav-item-8": "Invest",
     "img-src": "img/logo.png"
   },
   "cta": {
@@ -54,10 +56,16 @@ navBar[2].style.color = 'green';
 navBar[3].style.color = 'green';
 navBar[4].style.color = 'green';
 navBar[5].style.color = 'green';
-let shopLink = document.createElement('a');
-shopLink.textContent = 'Shop';
-shopLink.appendChild(navBar);
 
+const wholeNav = document.querySelector('nav');
+const shopLink = document.createElement('a');
+const investLink = document.createElement('a');
+shopLink.textContent ='Shop';
+investLink.textContent = 'Invest';
+shopLink.style.color = 'green';
+investLink.style.color = 'green';
+wholeNav.appendChild(shopLink);
+wholeNav.prepend(investLink);
 
 let cta_title = document.querySelector('.cta h1');
 cta_title.innerHTML = siteContent.cta['h1'];
